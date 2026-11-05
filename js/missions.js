@@ -36,7 +36,7 @@
     },
     {
       id: 6, roman: 'VI', title: 'Il mistero del Codex Umbrae',
-      intro: 'La notte di Ognissanti del 1891 il Codex Umbrae è sparito. Il custode giura di averlo visto al suo posto alle 23:30.',
+      intro: 'Nella notte tra il 31 ottobre e il 1° novembre 1891 il Codex Umbrae è sparito. Il custode giura di averlo visto al suo posto alle 23:30.',
       outro: 'Il colpevole ha un nome. Ma nel diario di Aurelio c\'è ancora una pagina che non torna…'
     },
     {
@@ -50,7 +50,7 @@
     // ---------------------------------------------------------------- Cap. I
     {
       id: 1, chapter: 1, title: 'Il primo sguardo', concept: 'SELECT *',
-      story: 'Benvenuto, {nome}. Il vecchio archivista, Maestro Aurelio Vannucci, è scomparso da una settimana lasciando le chiavi sulla scrivania. Prima di tutto, fai il giro delle stanze.',
+      story: 'Eccoti, {nome}. Il vecchio archivista, Maestro Aurelio Vannucci, è scomparso pochi giorni fa lasciando le chiavi sulla scrivania. Prima di tutto, fai il giro delle stanze.',
       task: 'Mostra <b>tutte le colonne</b> di <b>tutte le sale</b> dell\'archivio (tabella <code>sale</code>).',
       solution: 'SELECT * FROM sale;',
       hints: ['L\'asterisco <code>*</code> significa «tutte le colonne».', 'La forma è <code>SELECT * FROM nome_tabella;</code>'],
@@ -331,7 +331,7 @@
     },
     {
       id: 34, chapter: 7, title: 'La stanza fuori catalogo', concept: 'sqlite_master',
-      story: 'Sotto il volume più prezioso della Sala dei Codici trovi un biglietto: «Il catalogo dei cataloghi si chiama sqlite_master. Chiedigli quali tabelle esistono davvero».',
+      story: 'Il volume più prezioso della Sala dei Codici è proprio il Codex scomparso. Sul suo scaffale vuoto, però, trovi un biglietto: «Il catalogo dei cataloghi si chiama sqlite_master. Chiedigli quali tabelle esistono davvero».',
       task: 'Elenca il <b>nome</b> (<code>name</code>) di tutte le tabelle presenti in <code>sqlite_master</code> (quelle con <code>type = \'table\'</code>).',
       solution: "SELECT name FROM sqlite_master WHERE type = 'table';",
       hints: ['<code>sqlite_master</code> è una tabella speciale che descrive il database stesso.', '<code>SELECT name FROM sqlite_master WHERE type = \'table\';</code>'],

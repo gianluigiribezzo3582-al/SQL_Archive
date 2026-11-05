@@ -793,7 +793,7 @@
       const id = state.current;
       if (!b.dataset.armed) {
         b.dataset.armed = '1';
-        b.innerHTML = 'Sicuro? Tocca di nuovo';
+        b.innerHTML = 'Confermi? Tocca di nuovo';
         setTimeout(() => { if (b.dataset.armed) renderHints(); }, 3500);
         return;
       }
@@ -806,7 +806,7 @@
     resetBtn.addEventListener('click', () => {
       if (!resetBtn.dataset.armed) {
         resetBtn.dataset.armed = '1';
-        resetBtn.textContent = 'Sicuro? Tocca di nuovo';
+        resetBtn.textContent = 'Confermi? Tocca di nuovo';
         setTimeout(() => { resetBtn.dataset.armed = ''; resetBtn.textContent = 'Ripristina archivio'; }, 3500);
         return;
       }
