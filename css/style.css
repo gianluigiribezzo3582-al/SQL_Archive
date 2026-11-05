@@ -250,6 +250,15 @@ kbd {
 .panel-note { margin: 0 0 10px; font-size: .9rem; color: var(--ink-soft); font-style: italic; }
 
 .progress { margin-bottom: 12px; }
+.side-rank {
+  display: none;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-family: var(--f-head);
+}
+.side-rank small { font-family: var(--f-body); color: var(--ink-faint); font-size: .8rem; }
 .progress-row { display: flex; justify-content: space-between; font-size: .88rem; color: var(--ink-soft); margin-bottom: 4px; }
 
 .chapters { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
@@ -446,6 +455,7 @@ kbd {
   line-height: 1.1;
 }
 .mission-story {
+  display: flow-root;
   margin: 0 0 14px;
   font-style: italic;
   font-size: 1.08rem;
@@ -802,7 +812,7 @@ table.ledger {
   .appbar { padding: 8px 10px; gap: 8px; top: 6px; }
   .brand { gap: 8px; }
   .brand .seal { display: none; }
-  .brand h1 { font-size: 1.45rem; }
+  .brand h1 { font-size: 1.45rem; white-space: nowrap; }
   .brand-sub { font-size: .8rem; }
   .rank { min-width: 0; }
   .rank-xp { display: none; }
@@ -842,7 +852,8 @@ table.ledger {
 
 @media (max-width: 420px) {
   .brand-sub { display: none; }
-  .rank { max-width: 120px; }
+  .appbar .rank { display: none; }
+  .side-rank { display: flex; }
 }
 
 @media (prefers-reduced-motion: reduce) {

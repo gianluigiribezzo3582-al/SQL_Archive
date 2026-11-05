@@ -418,6 +418,8 @@
     const { r, next } = rankFor(xp);
     $('#rankName').textContent = r.name;
     $('#xpValue').textContent = xp;
+    $('#rankNameSide').textContent = r.name;
+    $('#xpValueSide').textContent = xp;
     const pct = next ? Math.round((xp - r.xp) / (next.xp - r.xp) * 100) : 100;
     $('#rankBarFill').style.width = pct + '%';
     $('#rankBox').title = next ? `${r.name} — ${next.xp - xp} gocce al grado di ${next.name}` : `${r.name} — grado massimo`;
